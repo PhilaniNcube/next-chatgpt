@@ -28,7 +28,7 @@ export default async function handler(
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 200,
+    max_tokens: 90,
     stream: false,
     n: 1,
   }

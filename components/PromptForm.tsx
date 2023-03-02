@@ -30,7 +30,7 @@ const PromptForm = () => {
 
     let answer = await response.json();
     console.log(answer);
-    setPromptResponse(answer);
+    setPromptResponse(answer.choices[0].text);
     setLoading(false)
   }
 
