@@ -35,7 +35,7 @@ const PromptForm = () => {
   }
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto py-10">
       <form onSubmit={handleSubmit} className="w-1/2 mx-auto py-10">
         <div className="flex flex-col md:mr-16">
           <label
@@ -63,7 +63,9 @@ const PromptForm = () => {
         </button>
       </form>
 
-      <h2 className="text-lg font-bold text-slate-400 mt-6">Response: {loading ? 'Loading...':promptResponse}</h2>
+      <h2 className="text-lg font-bold text-slate-400 mt-6">
+        Response: {loading ? "Loading..." : promptResponse}
+      </h2>
     </div>
   );
 };
