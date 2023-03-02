@@ -22,7 +22,7 @@ export default async function handler(
   }
 
   const payload = {
-    model: 'gpt-3.5-turbo',
+    model: 'text-davinci-003',
     prompt,
     temperature: 0.7,
     top_p: 1,
