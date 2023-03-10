@@ -59,7 +59,7 @@ const PromptForm = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto py-10">
+    <div className="max-w-7xl mx-auto py-10 grid grid-cols-1 gap-2  md:grid-cols-2">
       <form onSubmit={handleSubmit} className="w-full py-10">
         <div className="flex flex-col md:mr-16">
           <label
@@ -84,9 +84,12 @@ const PromptForm = () => {
         </button>
       </form>
 
-      <h2 className="text-lg font-medium text-slate-400 mt-6 whitespace-pre-line">
-        Response: {loading ? "Loading..." : promptResponse}
-      </h2>
+      <div>
+        <h2 className="mb-2 font-medium text-slate-700 text-xl">{loading ? 'Loading...' : 'Response'}</h2>
+        <p className="text-ml text-slate-400 mt-6 whitespace-pre-line">
+          {loading ? "Loading..." : promptResponse}
+        </p>
+      </div>
     </div>
   );
 };
