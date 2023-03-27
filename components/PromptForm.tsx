@@ -1,6 +1,7 @@
 "use client"
 
 import { FormEvent, useState } from "react";
+import ResizablePanel from "./ResizePanel";
 
 const PromptForm = () => {
 
@@ -59,34 +60,34 @@ const PromptForm = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto py-10">
-      <form onSubmit={handleSubmit} className="w-3/4 py-10">
-        <div className="flex flex-col md:mr-16">
+    <div className="py-10 mx-auto max-w-7xl">
+      <form onSubmit={handleSubmit} className="w-full py-10">
+        <div className="flex flex-col">
           <label
             htmlFor="prompt"
-            className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
+            className="mb-2 text-sm font-bold leading-tight tracking-normal text-zinc-800"
           >
             What is your question?
           </label>
-          <input
-            type="text"
+          <textarea
             id="prompt"
+            rows={3}
             name="prompt"
-            className="text-gray-600 dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
+            className="flex items-center w-full p-3 text-sm font-normal text-gray-600 bg-white border border-gray-300 rounded shadow dark:text-gray-400 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800"
           />
         </div>
 
         <button
           type="submit"
-          className="bg-blue-600 mt-8 text-white text-lg font-medium px-6 py-2 rounded-md"
+          className="px-6 py-2 mt-8 text-lg font-medium text-white bg-blue-600 rounded-md"
         >
           Submit
         </button>
       </form>
 
-      <h2 className="text-lg font-medium text-slate-400 mt-6">
+      <ResizablePanel>
         Response: {loading ? "Loading..." : promptResponse}
-      </h2>
+      </ResizablePanel>
     </div>
   );
 };

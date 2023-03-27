@@ -1,7 +1,7 @@
 import PromptForm from '@/components/PromptForm'
 import Image from 'next/image'
 import { Fragment } from 'react';
-import HomePageHero from './HomePageHero';
+
 
 
 
@@ -9,8 +9,9 @@ import HomePageHero from './HomePageHero';
 export default function Home() {
   return (
     <Fragment>
-      <HomePageHero />
-      <main className="max-w-7xl mx-auto py-2">
+
+      <main className="px-3 py-2 mx-auto my-auto lg:px-20 max-w-7xl">
+        <h1 className="text-5xl font-medium text-zinc-600">Write your prompt</h1>
         <PromptForm />
       </main>
     </Fragment>

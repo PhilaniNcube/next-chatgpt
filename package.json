@@ -16,9 +16,11 @@
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "eventsource-parser": "^0.1.0",
+    "framer-motion": "^10.9.1",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-use-measure": "^2.1.1",
     "typescript": "4.9.5"
   },
   "devDependencies": {
