@@ -61,8 +61,8 @@ const PromptForm = () => {
 
   return (
     <div className="py-10 mx-auto max-w-7xl">
-      <form onSubmit={handleSubmit} className="w-3/4 py-10">
-        <div className="flex flex-col md:mr-16">
+      <form onSubmit={handleSubmit} className="w-full py-10">
+        <div className="flex flex-col">
           <label
             htmlFor="prompt"
             className="mb-2 text-sm font-bold leading-tight tracking-normal text-zinc-800"
@@ -85,9 +85,11 @@ const PromptForm = () => {
         </button>
       </form>
 
-      <h2 className="mt-6 text-lg font-medium text-slate-400">
-        Response: {loading ? "Loading..." : promptResponse}
-      </h2>
+      <ResizablePanel>
+        <p className="text-lg font-medium text-slate-400">
+          Response: {loading ? "Loading..." : promptResponse}
+        </p>
+      </ResizablePanel>
     </div>
   );
 };
